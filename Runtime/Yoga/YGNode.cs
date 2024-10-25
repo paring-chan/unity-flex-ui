@@ -292,6 +292,17 @@ namespace Gilzoide.FlexUi.Yoga
             }
         }
 
+        public void SetMeasureFunc(Yoga.MeasureFunc func)
+        {
+            Yoga.YGNodeSetMeasureFunc(_nodePtr, func);
+        }
+
+        public IntPtr GetContext() => Yoga.YGNodeGetContext(_nodePtr);
+
+        public void SetContext(IntPtr context) => Yoga.YGNodeSetContext(_nodePtr, context);
+
+        public void MarkDirty() => Yoga.YGNodeMarkDirty(_nodePtr);
+
         #endregion
 
         #region Layout

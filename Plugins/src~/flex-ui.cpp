@@ -265,4 +265,20 @@ EXPORT void FlexUi_NodeStyleSetAspectRatio(YGNodeRef node, float aspectRatio) {
 	YGNodeStyleSetAspectRatio(node, aspectRatio);
 }
 
+EXPORT void FlexUi_NodeSetMeasureFunc(YGNodeRef node, YGMeasureFunc measureFunc) {
+	YGNodeSetMeasureFunc(node, measureFunc);
+}
+
+EXPORT void FlexUi_NodeSetContext(YGNodeRef node, void* context) {
+	return YGNodeSetContext(node, context);
+}
+
+EXPORT void* FlexUi_NodeGetContext(YGNodeRef node) {
+	return YGNodeGetContext(node);
+}
+
+EXPORT void FlexUi_NodeMarkDirty(YGNodeRef node) {
+	YGNodeMarkDirty(node);
+}
+
 }
